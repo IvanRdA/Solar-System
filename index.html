@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Information - Project by Iván RdA</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
+</head>
+<body>
+    <div id="intro-panel">
+        <h1>A solar system view</h1>
+        <h3>Know all the information about the planets of our star system. Just click on any object to see the information about.</h3>
+        <h5>About:</h5>
+        <h6>Our model of the solar system is at scale. It means that distances ratios between planets are equal to reality, as diameter values, orbital speed, etc.<br />
+            For obvious reasons, it can't be a homogeneous scale because the difference of size and distance between the objects. For that reason, you must know that the proportions are the following:<br />
+            - Distance from sun = (real distance / 10.000) * 3. For Jupiter is real distance / 10.000. For Saturn is (real distance / 10.000) / 1,5. For Uranus is (real distance / 10.000) / 2 and for Neptune is (real distance / 10.000) / 2,5
+            - Diameter = 
+            - Orbital period = 
+        </h6>
+    </div>
+
+    <div class="info-panel">
+        <h4 class="info-title">Information Panel</h4> <br />
+        <span id="chosen-planet"><h5 class="chosen-planet">Click on a planet to see the information</h5></span><br />
+        <ul class="planet-data">
+            <li><u>Atmosphere composition:</u> <b><span id="planet-atmosphere"></span></b></li><br />
+            <li><u>Satellites:</u> <b><span id="planet-satellites"></span></b></li><br />
+            <li><u>Distance from sun:</u> <b><span id="planet-distance"></span></b></li><br />
+            <li><u>Diameter:</u> <b><span id="planet-diameter"></span></b></li><br />
+            <li><u>Mass:</u> <b><span id="planet-mass"></span></b></li><br />
+            <li><u>Gravity:</u> <b><span id="planet-gravity"></span></b></li><br />
+            <li><u>Orbital period:</u> <b><span id="planet-orbital"></b></span></li><br />
+            <li><u>Rotation time:</u> <b><span id="planet-rotation"></span></b></li><br />
+            <button id="clear">Clear Info</button>
+        </ul>
+    </div>
+    <div class="planet-buttons">
+        <h4 class="buttons-title">For smaller and faster objects, you can click the buttons directly.</h4>
+        <button class="planet-button" id="button-sun">SUN</button>
+        <button class="planet-button" id="button-mercury">MERCURY</button>
+        <button class="planet-button" id="button-venus">VENUS</button>
+        <button class="planet-button" id="button-earth">EARTH</button>
+        <button class="planet-button" id="button-mars">MARS</button>
+        <button class="planet-button" id="button-jupiter">JUPITER</button>
+        <button class="planet-button" id="button-saturn">SATURN</button>
+        <button class="planet-button" id="button-uranus">URANUS</button>
+        <button class="planet-button" id="button-neptune">NEPTUNE</button>
+    </div>
+
+    <div class="planet-rankings">
+        <h4 id="rankings-title">Order by:</h4>
+        <select id="ranking-filter" class="ranking-filter">
+            <option selected id="clear" value="clear">Blank Ranking</option>
+            <option id="distance_sun" value="distance_from_sun">Distance from sun</option>
+            <option id="diameter" value="diameter">Diameter</option>
+            <option id="mass" value="mass">Mass</option>
+            <option id="gravity" value="gravity">Gravity</option>
+            <option id="orbital_period" value="orbital_period">Orbital period</option>
+            <option id="rotation_time" value="rotation_time">Rotation time</option>
+        </select>
+        <button class="filter-button" value="filter" id="filter_button">ORDER</button>
+        
+        <div id="ranking-list">
+            
+        </div>
+
+    </div>
+    <div class="solarsystem">
+        <img src="img/bg.jpg" />
+        <!-- Sun -->
+        <div id="sun" class="sun">
+        </div>
+
+        <!-- Mercury -->
+        <div class="mercury-orbit"></div>
+        <div id="mercury" class="mercury">
+        </div>
+
+        <!-- Venus -->
+        <div class="venus-orbit"></div>
+        <div id="venus" class="venus">
+        </div>
+
+        <!-- Earth -->
+        <div class="earth-orbit"></div>
+        <div id="earth" class="earth">
+        </div>
+
+        <!-- Mars -->
+        <div class="mars-orbit"></div>
+        <div id="mars" class="mars">
+        </div>
+
+        <!-- Jupiter -->
+        <div class="jupiter-orbit"></div>
+        <div id="jupiter" class="jupiter">
+        </div>
+
+        <!-- Saturn -->
+        <div class="saturn-orbit"></div>
+        <div id="saturn" class="saturn">
+        </div>
+
+        <!-- Uranus -->
+        <div class="uranus-orbit"></div>
+        <div id="uranus" class="uranus">
+        </div>
+
+        <!-- Neptune -->
+        <div class="neptune-orbit"></div>
+        <div id="neptune" class="neptune">
+        </div>
+    </div>
+    <script src="logic.js" type="text/javascript"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@ HTML5, CSS3 and JavaScript (vanilla)
 - PROJECT DESCRIPTION -
 This is a site developed with basic HTML and CSS. It shows an animation of the planets of our solar system orbitating the sun.
 
-The app contains one button for each planet that shots the information about itself on the left panel. In addition, if a planet or the sun are clicked the info is shot as well.
+The app contains one button for each planet that shoots the information about itself on the left panel. In addition, if a planet or the sun are clicked the info is shot as well.
 The user can take a parameter selector of the right panel to see a ranking of the planets based in the chosen parameter.
 
 - RELATED HTML TOPICS - 
